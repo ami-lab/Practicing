@@ -1,0 +1,37 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+ int a, b, c, i;
+    cout<<"Enter value for a :"; cin>>a;
+    cout<<"Enter value for b :"; cin>>b;
+    cout<<"Enter value for c :"; cin>>c;
+    
+int den = b*b-4*a*c;
+
+if (den>0){
+    int root1=(-b+sqrt(den))/(2*a);
+    int root2=(-b-sqrt(den))/(2*a);
+    cout << "x1:" <<root1<<endl;
+    cout << "x2:" <<root2<<endl;
+}
+else if (den==0){
+    int root1=-b/(2*a);
+    int root2=-b/(2*a);
+    cout << "x1:" <<root1<<endl;
+    cout << "x2:" <<root2<<endl;
+}
+else {
+    int root1_1=-b/(2*a);
+    int root1_2= sqrt(den* -1)/(2*a);
+    cout<< root1_1<<"+"<< root1_2 <<"i"<<endl;
+    
+    int root2_1=-b/(2*a);
+    int root2_2= sqrt(den* -1)/(2*a);
+    cout<< root2_1 <<"-"<< root2_2 <<"i"<<endl;
+    
+}
+}
